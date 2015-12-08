@@ -1,0 +1,46 @@
+vocabulary.com = rekt
+
+Answers are checked client-side; disconnected internet and it would still validate
+
+First, gotta load cookies into mechanize to "log in"
+
+Looked into Javascript client code, found a section that referenced a JSON field with the answers
+
+Viewed activity in dev tools. One post request called "nextQuestion" seemed to retrieve the questions answers
+
+Went to POST url in Chrome, generated a JSON
+
+Found out that "adata" field was an encoded string with nonce ID's
+
+Used Mechanize to POST nextQuestion and retrieve the file
+
+Converted file to string to JSON and parsed it
+
+Viewed the Javascript client code again, and took the field and decoded "adata" with Base64
+
+adata was "encrypted" with a simple caeser cipher that shifted each letter 13 spaces to the right
+
+Couldn't figure out why I couldn't post "SaveAnswer" to submit the answer, found out it was because the "secret" had to be identical to the "nextQuestion" "secret".
+
+Dug a bit more and discovered that it was more advanced: SaveAnswer's reponse secret had to equal NextQuestion's post fields and NextQuestion's reponse secret had to equal SaveAnswer's post fields
+
+Needed to extract first index in adata hash, problem was adata hash was in string form
+
+Used a method to take a string between two other strings to extract data
+
+Found out there's more than one problem; one regular answer and one "master" question
+
+Checked the question type by seeing if the first letter was either "n" for "nonce" or "a" for "acceptedAnswers"
+
+Used the same method to take a string between two other strings (first was "word:\"") for the "master" question
+
+Experimented with "t", which stood for milliseconds since epoch, probably meant to calculate game time
+
+Pretty much confirmed "t" will not affect answering questions, even though it is a field in the POST request (however does affect "play time" on profile)
+
+When running, script would crash whenever you completed a new section, possibly since it can't find the JSON values in a new section slide
+
+Fixed this with simple exception handling (lol hacky)
+
+
+

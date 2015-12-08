@@ -1,0 +1,29 @@
+---
+vocabulary.com:
+  /:
+    _asid: !ruby/object:Mechanize::Cookie
+      name: _asid
+      value: you_asid_here
+      domain: vocabulary.com
+      for_domain: true
+      path: /
+      secure: false
+      httponly: false  
+    AWSELB: !ruby/object:Mechanize::Cookie
+      name: AWSELB
+      value: your_AWSELB_here
+      domain: vocabulary.com
+      for_domain: true
+      path: /
+      secure: false
+      httponly: false
+www.vocabulary.com:
+  /:    
+    JSESSIONID: !ruby/object:Mechanize::Cookie
+      name: JSESSIONID
+      value: your_JSESSIONID_here
+      domain: www.vocabulary.com
+      for_domain: false
+      path: /
+      secure: false
+      httponly: true
