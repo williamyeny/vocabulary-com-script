@@ -1,5 +1,5 @@
 #Summary
-Any actions executed client-side instead of sending server-side can be manipulated. Vocabulary.com is a perfect example of this.
+Any actions executed client-side instead of sending server-side can be manipulated. Vocabulary.com is a perfect example of this. This script simply reads hidden answers sent by the server and sends it right back.
 
 #Dependencies
 Mechanize
