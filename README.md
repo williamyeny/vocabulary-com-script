@@ -8,5 +8,5 @@ gem install mechanize
 ```
 Caesar Cipher
 ```
-gem install caesar\_cipher
+gem install caesar_cipher
 ```

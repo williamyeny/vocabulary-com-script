@@ -3,7 +3,7 @@ vocabulary.com:
   /:
     _asid: !ruby/object:Mechanize::Cookie
       name: _asid
-      value: you_asid_here
+      value: 000aukHu4
       domain: vocabulary.com
       for_domain: true
       path: /
@@ -11,7 +11,7 @@ vocabulary.com:
       httponly: false  
     AWSELB: !ruby/object:Mechanize::Cookie
       name: AWSELB
-      value: your_AWSELB_here
+      value: CDF34DB1160B0CF8742D64524CF4F7794CB5B7D51A9AD98525E9B0A0D1878D508BDC8E99BDEE1D13B3C95BDA9B70DF834276B7F73432983C09A844C999EFA750019478F68C34055A329624CEF002FC98741D403E0B
       domain: vocabulary.com
       for_domain: true
       path: /
@@ -21,7 +21,7 @@ www.vocabulary.com:
   /:    
     JSESSIONID: !ruby/object:Mechanize::Cookie
       name: JSESSIONID
-      value: your_JSESSIONID_here
+      value: 937E4B4DB878E15F77A5E40AC644269C
       domain: www.vocabulary.com
       for_domain: false
       path: /
