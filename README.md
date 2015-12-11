@@ -6,7 +6,11 @@ Mechanize
 ```
 gem install mechanize
 ```
-Caesar Cipher
+Caesar Cipher (because I was too lazy to write it myself)
 ```
 gem install caesar_cipher
 ```
+
+#Files?
+vocab-source is just Javascript taken directly off Vocabulary.com's website.
+devlog.txt is just a journal of sorts.
